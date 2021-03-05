@@ -1,0 +1,1132 @@
+{
+   "annotations": {
+     "list": [
+       {
+         "builtIn": 1,
+         "datasource": "-- Grafana --",
+         "enable": true,
+         "hide": true,
+         "iconColor": "rgba(0, 211, 255, 1)",
+         "name": "Annotations & Alerts",
+         "type": "dashboard"
+       }
+     ]
+   },
+   "editable": true,
+   "gnetId": null,
+   "graphTooltip": 0,
+   "id": 2,
+   "links": [],
+   "panels": [
+     {
+       "aliasColors": {},
+       "bars": false,
+       "dashLength": 10,
+       "dashes": false,
+       "datasource": null,
+       "fieldConfig": {
+         "defaults": {
+           "color": {},
+           "custom": {},
+           "thresholds": {
+             "mode": "absolute",
+             "steps": []
+           },
+           "unit": "short"
+         },
+         "overrides": []
+       },
+       "fill": 1,
+       "fillGradient": 0,
+       "gridPos": {
+         "h": 8,
+         "w": 13,
+         "x": 0,
+         "y": 0
+       },
+       "hiddenSeries": false,
+       "id": 4,
+       "legend": {
+         "avg": false,
+         "current": false,
+         "max": false,
+         "min": false,
+         "show": true,
+         "total": false,
+         "values": false
+       },
+       "lines": true,
+       "linewidth": 1,
+       "nullPointMode": "null",
+       "options": {
+         "alertThreshold": true
+       },
+       "percentage": false,
+       "pluginVersion": "7.4.3",
+       "pointradius": 2,
+       "points": false,
+       "renderer": "flot",
+       "seriesOverrides": [],
+       "spaceLength": 10,
+       "stack": false,
+       "steppedLine": false,
+       "targets": [
+         {
+           "format": "time_series",
+           "group": [],
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  daily_vaccinations\nFROM data\nWHERE\n  country = 'France'\nORDER BY date",
+           "refId": "A",
+           "select": [
+             [
+               {
+                 "params": [
+                   "daily_vaccinations"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'France'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  daily_vaccinations\nFROM data\nWHERE\n  country = 'Belgium'\nORDER BY date",
+           "refId": "B",
+           "select": [
+             [
+               {
+                 "params": [
+                   "daily_vaccinations"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Belgium'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  daily_vaccinations\nFROM data\nWHERE\n  country = 'Denmark'\nORDER BY date",
+           "refId": "C",
+           "select": [
+             [
+               {
+                 "params": [
+                   "daily_vaccinations"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Denmark'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  daily_vaccinations\nFROM data\nWHERE\n  country = 'England'\nORDER BY date",
+           "refId": "D",
+           "select": [
+             [
+               {
+                 "params": [
+                   "daily_vaccinations"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'England'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  daily_vaccinations\nFROM data\nWHERE\n  country = 'Finland'\nORDER BY date",
+           "refId": "E",
+           "select": [
+             [
+               {
+                 "params": [
+                   "daily_vaccinations"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Finland'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  daily_vaccinations\nFROM data\nWHERE\n  country = 'Germany'\nORDER BY date",
+           "refId": "F",
+           "select": [
+             [
+               {
+                 "params": [
+                   "daily_vaccinations"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Germany'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  daily_vaccinations\nFROM data\nWHERE\n  country = 'Italy'\nORDER BY date",
+           "refId": "G",
+           "select": [
+             [
+               {
+                 "params": [
+                   "daily_vaccinations"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Italy'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  daily_vaccinations\nFROM data\nWHERE\n  country = 'Switzerland'\nORDER BY date",
+           "refId": "H",
+           "select": [
+             [
+               {
+                 "params": [
+                   "daily_vaccinations"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Switzerland'"
+               ],
+               "type": "expression"
+             }
+           ]
+         }
+       ],
+       "thresholds": [],
+       "timeFrom": null,
+       "timeRegions": [],
+       "timeShift": null,
+       "title": "Vaccinations journalières en Europe Occidentale depuis Décembre 2020",
+       "tooltip": {
+         "shared": true,
+         "sort": 0,
+         "value_type": "individual"
+       },
+       "type": "graph",
+       "xaxis": {
+         "buckets": null,
+         "mode": "time",
+         "name": null,
+         "show": true,
+         "values": []
+       },
+       "yaxes": [
+         {
+           "format": "short",
+           "label": null,
+           "logBase": 1,
+           "max": null,
+           "min": null,
+           "show": true
+         },
+         {
+           "format": "short",
+           "label": null,
+           "logBase": 1,
+           "max": null,
+           "min": null,
+           "show": true
+         }
+       ],
+       "yaxis": {
+         "align": false,
+         "alignLevel": null
+       }
+     },
+     {
+       "datasource": null,
+       "fieldConfig": {
+         "defaults": {
+           "color": {
+             "mode": "thresholds"
+           },
+           "custom": {},
+           "mappings": [],
+           "thresholds": {
+             "mode": "absolute",
+             "steps": [
+               {
+                 "color": "green",
+                 "value": null
+               },
+               {
+                 "color": "red",
+                 "value": 80
+               }
+             ]
+           }
+         },
+         "overrides": []
+       },
+       "gridPos": {
+         "h": 12,
+         "w": 11,
+         "x": 13,
+         "y": 0
+       },
+       "id": 6,
+       "options": {
+         "displayMode": "gradient",
+         "orientation": "auto",
+         "reduceOptions": {
+           "calcs": [
+             "lastNotNull"
+           ],
+           "fields": "",
+           "values": false
+         },
+         "showUnfilled": true,
+         "text": {}
+       },
+       "pluginVersion": "7.4.3",
+       "targets": [
+         {
+           "format": "time_series",
+           "group": [],
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  people_vaccinated_per_hundred\nFROM data\nWHERE\n  country = 'France'\nORDER BY date",
+           "refId": "A",
+           "select": [
+             [
+               {
+                 "params": [
+                   "people_vaccinated_per_hundred"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'France'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  people_vaccinated_per_hundred\nFROM data\nWHERE\n  country = 'England'\nORDER BY date",
+           "refId": "B",
+           "select": [
+             [
+               {
+                 "params": [
+                   "people_vaccinated_per_hundred"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'England'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  people_vaccinated_per_hundred\nFROM data\nWHERE\n  country = 'Belgium'\nORDER BY date",
+           "refId": "C",
+           "select": [
+             [
+               {
+                 "params": [
+                   "people_vaccinated_per_hundred"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Belgium'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  people_vaccinated_per_hundred\nFROM data\nWHERE\n  country = 'Denmark'\nORDER BY date",
+           "refId": "D",
+           "select": [
+             [
+               {
+                 "params": [
+                   "people_vaccinated_per_hundred"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Denmark'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  people_vaccinated_per_hundred\nFROM data\nWHERE\n  country = 'Finland'\nORDER BY date",
+           "refId": "E",
+           "select": [
+             [
+               {
+                 "params": [
+                   "people_vaccinated_per_hundred"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Finland'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  people_vaccinated_per_hundred\nFROM data\nWHERE\n  country = 'Italy'\nORDER BY date",
+           "refId": "F",
+           "select": [
+             [
+               {
+                 "params": [
+                   "people_vaccinated_per_hundred"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Italy'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  people_vaccinated_per_hundred\nFROM data\nWHERE\n  country = 'Germany'\nORDER BY date",
+           "refId": "G",
+           "select": [
+             [
+               {
+                 "params": [
+                   "people_vaccinated_per_hundred"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Germany'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  people_vaccinated_per_hundred\nFROM data\nWHERE\n  country = 'Switzerland'\nORDER BY date",
+           "refId": "H",
+           "select": [
+             [
+               {
+                 "params": [
+                   "people_vaccinated_per_hundred"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Switzerland'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  people_vaccinated_per_hundred\nFROM data\nWHERE\n  country = 'Spain'\nORDER BY date",
+           "refId": "I",
+           "select": [
+             [
+               {
+                 "params": [
+                   "people_vaccinated_per_hundred"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Spain'"
+               ],
+               "type": "expression"
+             }
+           ]
+         }
+       ],
+       "title": "Pourcentage de personnes vaccinés en Europe Occidentale depuis Décembre 2020",
+       "type": "bargauge"
+     },
+     {
+       "aliasColors": {},
+       "bars": false,
+       "dashLength": 10,
+       "dashes": false,
+       "datasource": null,
+       "fieldConfig": {
+         "defaults": {
+           "color": {},
+           "custom": {},
+           "thresholds": {
+             "mode": "absolute",
+             "steps": []
+           },
+           "unit": "short"
+         },
+         "overrides": []
+       },
+       "fill": 1,
+       "fillGradient": 0,
+       "gridPos": {
+         "h": 10,
+         "w": 13,
+         "x": 0,
+         "y": 8
+       },
+       "hiddenSeries": false,
+       "id": 2,
+       "legend": {
+         "avg": false,
+         "current": false,
+         "max": false,
+         "min": false,
+         "show": true,
+         "total": false,
+         "values": false
+       },
+       "lines": true,
+       "linewidth": 1,
+       "nullPointMode": "null",
+       "options": {
+         "alertThreshold": true
+       },
+       "percentage": false,
+       "pluginVersion": "7.4.3",
+       "pointradius": 2,
+       "points": false,
+       "renderer": "flot",
+       "seriesOverrides": [],
+       "spaceLength": 10,
+       "stack": false,
+       "steppedLine": false,
+       "targets": [
+         {
+           "format": "time_series",
+           "group": [],
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  total_vaccinations AS \"total_vaccinations\"\nFROM data\nWHERE\n  country = 'France'\nORDER BY date",
+           "refId": "A",
+           "select": [
+             [
+               {
+                 "params": [
+                   "total_vaccinations"
+                 ],
+                 "type": "column"
+               },
+               {
+                 "params": [
+                   "total_vaccinations"
+                 ],
+                 "type": "alias"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'France'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  total_vaccinations\nFROM data\nWHERE\n  country = 'England'\nORDER BY date",
+           "refId": "B",
+           "select": [
+             [
+               {
+                 "params": [
+                   "total_vaccinations"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'England'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  total_vaccinations\nFROM data\nWHERE\n  country = 'Spain'\nORDER BY date",
+           "refId": "C",
+           "select": [
+             [
+               {
+                 "params": [
+                   "total_vaccinations"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Spain'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  total_vaccinations\nFROM data\nWHERE\n  country = 'Germany'\nORDER BY date",
+           "refId": "D",
+           "select": [
+             [
+               {
+                 "params": [
+                   "total_vaccinations"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Germany'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  total_vaccinations\nFROM data\nWHERE\n  country = 'Italy'\nORDER BY date",
+           "refId": "E",
+           "select": [
+             [
+               {
+                 "params": [
+                   "total_vaccinations"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Italy'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  total_vaccinations\nFROM data\nWHERE\n  country = 'Switzerland'\nORDER BY date",
+           "refId": "F",
+           "select": [
+             [
+               {
+                 "params": [
+                   "total_vaccinations"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Switzerland'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  total_vaccinations\nFROM data\nWHERE\n  country = 'Denmark'\nORDER BY date",
+           "refId": "G",
+           "select": [
+             [
+               {
+                 "params": [
+                   "total_vaccinations"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Denmark'"
+               ],
+               "type": "expression"
+             }
+           ]
+         },
+         {
+           "format": "time_series",
+           "group": [],
+           "hide": false,
+           "metricColumn": "country",
+           "rawQuery": false,
+           "rawSql": "SELECT\n  date AS \"time\",\n  country AS metric,\n  total_vaccinations\nFROM data\nWHERE\n  country = 'Belgium'\nORDER BY date",
+           "refId": "H",
+           "select": [
+             [
+               {
+                 "params": [
+                   "total_vaccinations"
+                 ],
+                 "type": "column"
+               }
+             ]
+           ],
+           "table": "data",
+           "timeColumn": "date",
+           "timeColumnType": "datetime",
+           "where": [
+             {
+               "datatype": "varchar",
+               "name": "",
+               "params": [
+                 "country",
+                 "=",
+                 "'Belgium'"
+               ],
+               "type": "expression"
+             }
+           ]
+         }
+       ],
+       "thresholds": [],
+       "timeFrom": null,
+       "timeRegions": [],
+       "timeShift": null,
+       "title": "Vaccinations en Europe Occidentale depuis Décembre 2020",
+       "tooltip": {
+         "shared": true,
+         "sort": 0,
+         "value_type": "individual"
+       },
+       "type": "graph",
+       "xaxis": {
+         "buckets": null,
+         "mode": "time",
+         "name": null,
+         "show": true,
+         "values": []
+       },
+       "yaxes": [
+         {
+           "format": "short",
+           "label": null,
+           "logBase": 1,
+           "max": null,
+           "min": null,
+           "show": true
+         },
+         {
+           "format": "short",
+           "label": null,
+           "logBase": 1,
+           "max": null,
+           "min": null,
+           "show": true
+         }
+       ],
+       "yaxis": {
+         "align": false,
+         "alignLevel": null
+       }
+     }
+   ],
+   "refresh": false,
+   "schemaVersion": 27,
+   "style": "dark",
+   "tags": [],
+   "templating": {
+     "list": []
+   },
+   "time": {
+     "from": "2020-12-13T00:00:00.000Z",
+     "to": "2021-02-24T00:00:00.000Z"
+   },
+   "timepicker": {},
+   "timezone": "",
+   "title": "vaccinations_dashboard",
+   "uid": "Mdg4ZzUGk",
+   "version": 11
+ }
