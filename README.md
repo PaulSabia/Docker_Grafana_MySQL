@@ -91,4 +91,8 @@ Pour accéder à Grafana se rendre à l'url suivante : `localhost:3000`. L'accè
 * `user : admin`
 * `password : admin`
 
+Ici, 3 graphiques sont représentés :
+* 
+
+* 
 ![](./dashboard.png)
