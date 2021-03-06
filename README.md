@@ -86,7 +86,7 @@ Réaliser la commande suivante au sein du répertoire local afin de construire l
 
 ## Accès au dashboard Grafana :
 
-Pour accéder à Grafana se rendre à l'url suivante : `localhost:3000`. L'accès est en view only mais il est possible de se connecter avec les identifiants par défaut qui sont:
+Pour accéder à Grafana se rendre à l'url suivante : `localhost:3000`. L'accès est en visiteur mais il est possible de se connecter avec les identifiants par défaut qui sont:
 
 * `user : admin`
 * `password : admin`
